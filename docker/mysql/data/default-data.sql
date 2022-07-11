@@ -5,5 +5,5 @@ ALTER TABLE post ADD CONSTRAINT FK_5A8A6C8DA76ED395 FOREIGN KEY (user_id) REFERE
 ALTER TABLE todo ADD CONSTRAINT FK_5A0EB6A0A76ED395 FOREIGN KEY (user_id) REFERENCES user (id);
 
 INSERT INTO user (email, password) VALUES
-    ('valid@email.com', '$2y$13$61HZXY7v7Ky/tPNoKyz08OwdHVKOWSnpSCSfGxJ1BcODlIqkBOcme'),
-    ('valid2@email.com', '$2y$13$KWFDcJcilbMclSMzV4AQb.cXuJ2EvVmbAavoH5f8KjC1Tkt3hpn8a');
+    ('valid@email.com', '$2y$13$/IMKwcYRzsWyMDKCNQMIzeztxv8tzzsVrGb2ITeMIJsmYstiFljCa'),
+    ('valid2@email.com', '$2y$13$oAshKu6bCtKdpVnnIcsI7.z7w.tKc5VLPi/.y4PjZNt5dFDHvV8SW');
