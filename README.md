@@ -39,7 +39,10 @@ Elasticsearch haven't been implemented. I didn't have time.
 ## Tests
 
 Run tests:
-```
-cd src && php composer.phar test
-```
+
+1. `cd src`
+2. `APP_ENV=test php bin/console doctrine:migrations:migrate --no-interaction`
+3. `APP_ENV=test php bin/console doctrine:fixtures:load --no-interaction`
+4. `APP_ENV=test php composer.phar test`
+
 php v7.3 required if running locally.
