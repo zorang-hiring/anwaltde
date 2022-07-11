@@ -1,5 +1,4 @@
 .phpunit.result.cache
-.env
 
 ###> symfony/framework-bundle ###
 /.env.local

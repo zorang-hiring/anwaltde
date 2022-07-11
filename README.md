@@ -1,32 +1,14 @@
 # Anwaltde Test Task
 
+## Task description
+
+Check https://github.com/AnwaltdeRepo/be-developer-test-v2 
+
+(Elasticsearch haven't been implemented. I didn't have time.)
+
 ## Installation
 
-
-##### 2 Proposed
-
-Generate the public and private keys used for signing JWT tokens ( https://api-platform.com/docs/core/jwt/ ):
-
-```
-docker-compose exec php sh -c '
-    set -e
-    apk add openssl
-    php bin/console lexik:jwt:generate-keypair
-    setfacl -R -m u:www-data:rX -m u:"$(whoami)":rwX config/jwt
-    setfacl -dR -m u:www-data:rX -m u:"$(whoami)":rwX config/jwt
-'
-```
-
-```
-php bin/console doctrine:migrations:migrate --no-interaction
-```
-
-```
-php bin/console doctrine:fixtures:load --no-interaction
-```
-and type yes
-
-##### Run docker
+Run docker
 ```
 docker-compose -f docker/docker-compose.yml --env-file docker/sample.env up --build
 ```
@@ -50,14 +32,14 @@ By POST /authentication_token endpoint using the user/pass: valid@email.com/vali
 
 ### 4. Now you can use all API endpoints
 
+## Notes
+
+Elasticsearch haven't been implemented. I didn't have time.
+
 ## Tests
 
 Run tests:
 ```
 cd src && php composer.phar test
-
 ```
-
-## Notes
-
-Because of issues with composer in docker, composer vendor folder have been committed to repo.
+php v7.3 required if running locally.
